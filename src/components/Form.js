@@ -14,7 +14,7 @@ class Form extends Component {
     this.setState({ ...this.state, [input.name]: input.value });
   };
 
-  onFormSubmit = (event) => {
+  submitForm = (event) => {
     event.preventDefault();
     let name = this.state.name;
     let url = this.state.URL;
@@ -28,7 +28,7 @@ class Form extends Component {
 
   render() {
     return (
-      <form onSubmit={this.onFormSubmit}>
+      <form onSubmit={this.submitForm}>
         <label>Name:</label>
         <input
           type="text"

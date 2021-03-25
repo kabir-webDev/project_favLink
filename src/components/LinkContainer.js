@@ -12,9 +12,6 @@ class LinkContainer extends React.Component {
   }
 
   removeCharacter = (index) => {
-    console.log("Boom!! Deleted....");
-    console.log(index);
-
     if (index > -1) {
       this.state.favLinks.splice(index, 1);
       this.setState({
@@ -29,13 +26,9 @@ class LinkContainer extends React.Component {
         favLinks: [...this.state.favLinks, link],
       })
     );
-
-    console.log(favLink);
-    console.log(this.state.favLinks);
   };
 
   render() {
-    console.log(this.state.favLinks);
     return (
       <div className="container">
         <h1>My Favorite Links</h1>
